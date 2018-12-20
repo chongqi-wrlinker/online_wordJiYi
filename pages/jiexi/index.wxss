@@ -1,0 +1,90 @@
+/* pages/doTest/index.wxss */
+
+image{
+    width: 100%;
+    height: 100%;
+}
+.placeholder{
+    margin: 5px;
+    text-align: center;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #666;
+}
+
+.yingbiao{
+    background-color:#4395ff;
+    font-size:14px;
+    color:white;
+}
+.word{
+    font:bold 30px arial,sans-serif;
+    color:#1296db;
+}
+.wordJiexiChild{
+    font-size:12px;
+    border-top:0px;
+    text-align: left;
+}
+.buttonView{
+    font-size:12px;
+    color:#155461;
+}
+
+.bottomView{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:white;
+    height:100rpx;
+}
+
+.bottomView image{
+    width:28px;
+    height:20px
+}
+.bottomView .placeholder{
+    font-size: 12px;
+}
+
+.fayin{
+    background-repeat:no-repeat;
+    background-image:url(//fanyi.bdstatic.com/static/translation/sprite/images/normal/index-sc413d90635_65ba9b0.png);
+    background-position:1px -1045px;
+    height:20px;
+    width:20px;
+    margin:0 auto;
+}
+.fayin_active{
+    width:31px;
+    height:21px;
+    margin-right:15px;
+    background-image:url(//fanyi.bdstatic.com/static/translation/img/translate/output/sound2x_d6f553d.gif);
+    -moz-background-size:22px 21px;
+    background-size:22px 21px;
+    background-repeat:no-repeat;
+    background-position:7px -2px;
+    margin:0 auto;
+}
+
+.repeat{
+    background-repeat: no-repeat;
+    background-image: url(//fanyi.bdstatic.com/static/translation/sprite/images/normal/index-sc413d90635_65ba9b0.png);
+    background-position: 0 -887px;
+    height: 19px;
+    width: 19px;
+    margin:0 auto;
+}
+
+.yinyuWords{
+    text-align:left;
+    height:auto;
+    color:#966;
+    font-size:13px;
+}
+.hanziWord{
+    text-align:left;
+    height:auto;
+}
+
+

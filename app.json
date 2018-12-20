@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/paihangbang/index",
+        "pages/tiaozhanzhexian/index",
+        "pages/cihuizhexian/index",
+        "pages/fuxi/index",
+        "pages/oldWord/index",
+        "pages/newWord/index",
+        "pages/newWordCheck/index",
+        "pages/tiaozhan/index",
+        "pages/doTest/index",
+        "pages/wordCheck/index",
+        "pages/jiexi/index",
+        "pages/recitation/index",
+        "pages/success/index",
+        "pages/config/index",
+        "pages/tuisong/index",
+        "pages/wo/index"
+            ],
+    "window": {
+        "navigationBarTitleText": "番茄单词记忆",
+        "backgroundColor": "#f8f8f8",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1bd0bd",
+        "navigationBarTextStyle": "white"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "tabBar": {
+        "selectedColor": "#1296db",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/index/index_a.png",
+                "selectedIconPath": "/images/index/index_l1.png"
+            },
+            {
+                "pagePath": "pages/tuisong/index",
+                "text": "推送区",
+                "iconPath": "/images/index/tuisong_a.png",
+                "selectedIconPath": "/images/index/tuisong_l1.png"
+            },
+            {
+                "pagePath": "pages/wo/index",
+                "text": "关于我",
+                "iconPath": "/images/index/tuisong_a.png",
+                "selectedIconPath": "/images/index/tuisong_l1.png"
+            }
+        ]
+    },
+    "debug": false
+}

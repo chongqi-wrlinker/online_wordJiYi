@@ -1,0 +1,87 @@
+<!--pages/config/index.wxml-->
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+             <view class="placeholder" style='width:40px'>
+                <image src="/images/config/tongzhi.png"></image>
+             </view>
+            <view class="weui-flex__item">
+                <view class="placeholder guize">
+                    答题规则如下：{{questionRule}}
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder guizean" bindtap='showtck'>
+                    答题规则（查看全部）
+                </view>
+            </view>
+        </view>
+         <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='background-color:#F8F8F8;margin-top:40px'>
+                    专注学习时间设置
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder" style='background-color:#F8F8F8;'></view></view>
+            <view class="weui-flex__item" style='height:100px'>
+                <view class="placeholder" style='height:85px'>
+                    <image src='/images/config/shizhong.png'></image>
+                </view>
+            </view>
+            <view class="weui-flex__item"><view class="placeholder" style='background-color:#F8F8F8;'></view></view>
+        </view>
+         <view class="weui-flex">
+            <block wx:for="{{timeNumber}}" wx:key="index">
+            <view class="weui-flex__item" bindtap='selectTime' data-index="{{index}}">
+                <view class="placeholder {{item.flag?'selectThis':'timeNumber'}}">{{item.number}}</view>
+            </view>
+            </block>
+            
+        </view>
+         <view class="weui-flex">
+            <view class="weui-flex__item" >
+                <view class="placeholder" style='background-color:#F8F8F8;font-size:12px;margin-top:20px;'>
+                    单位：分钟（min）
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+             <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+             <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="weui-flex__item">
+                <view class="placeholder" style='background-color:#F8F8F8;font-size:12px;'>
+                    <button class="weui-btn" bindtap='goToDoTest' type="primary" style='background-color:#54b38a;color:white;'>开始答题</button>
+                </view>
+            </view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+        </view>
+    </view>
+    <view class="{{showtck?'ztck':'hide'}}"></view>
+    <view class="{{showtck?'nrtckhz':'hide'}}">
+      <view class='nrtck'>
+        <view class='top'>
+          <text>答题规则</text>
+        </view>
+        <view class='neirong'>
+          <text>
+            答题规则如下：{{questionRule}}
+          </text>
+        </view>
+      </view>
+      <view  class='guanbiimg' bindtap='guanbi'>
+        <image src='/images/config/guanbi.png'></image>
+      </view>
+    </view>
+</view>
+
+    
+

@@ -1,0 +1,192 @@
+<!--pages/jiexi/index.wxml-->
+<block wx:if="{{showZouShen==1}}">
+    <view class="page" bindtap="{{showJiexi==1?'nextWord1':'nextWord'}}">
+    <!--pages/doTest/index.wxml-->
+        <view class="page__bd page__bd_spacing" style='padding-bottom:0px;margin-bottom:100rpx;'>
+            <view class='weui-flex'>
+                <audio src="/images/recitation/clock.mp3" id="tishi"></audio>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder buttonView" style=''>
+                        专注时长:{{steadTime}}
+                    </view>
+                </view>
+            </view>
+            <block wx:if="{{showJiexi == 1}}">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder word " style='height:185px;line-height:185px'>
+                            {{wordInfo.word}}
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item "  data-flag="1" data-state="{{wordInfo['optionList'][0]['optionFlag']}}" bindtap='answerQuestion'>
+                        <view id="answerRight1" class="placeholder anwer {{wordInfo['optionList'][0]['optionState']}} ripple-effect1">
+                            <boWen id="boWen1" dom="answerRight1"></boWen>
+                            {{wordInfo['optionList'][0]['optionContent']}}
+                        </view>
+                    </view>
+                    
+                </view>
+                <view class='weui-flex'>
+                    <view class="weui-flex__item " data-flag="2" data-state="{{wordInfo['optionList'][1]['optionFlag']}}" bindtap='answerQuestion'>
+                        <view id="answerRight2" class="placeholder anwer {{wordInfo['optionList'][1]['optionState']}} ripple-effect1">
+                            <boWen id="boWen2" dom="answerRight2"></boWen>
+                            {{wordInfo['optionList'][1]['optionContent']}}
+                        </view>
+                    </view>
+                </view>
+                <view class='weui-flex'>
+                    <view class="weui-flex__item " data-flag="3" data-state="{{wordInfo['optionList'][2]['optionFlag']}}" bindtap='answerQuestion'>
+                        <view id="answerRight3" class="placeholder anwer {{wordInfo['optionList'][2]['optionState']}} ripple-effect1">
+                            <boWen id="boWen3" dom="answerRight3"></boWen>
+                            {{wordInfo['optionList'][2]['optionContent']}}
+                        </view>
+                    </view>
+                    
+                </view>
+                <view class='weui-flex'>
+                    <view class="weui-flex__item "data-flag="4" data-state="{{wordInfo['optionList'][3]['optionFlag']}}" bindtap='answerQuestion'>
+                        <view id="answerRight4" style='padding-left:0px;text-align:center' class="placeholder anwer {{wordInfo['optionList'][3]['optionState']}} ripple-effect1">
+                            <boWen id="boWen4" dom="answerRight4"></boWen>
+                            {{wordInfo['optionList'][3]['optionContent']}}
+                        </view>
+                    </view>
+                </view>
+                
+            </block>
+            <block wx:if="{{showJiexi == 2}}">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder word " style='height:110px;line-height:110px;'>
+                            {{wordInfo.word}}
+                        </view>
+                    </view>
+                </view>
+                <view class='weui-flex' style='font-size:12px'>
+                    <view class="weui-flex__item">
+                        <view class="placeholder ">
+                            英{{wordInfo.uk}}
+                        </view>
+                    </view>
+                    <view class="weui-flex__item">
+                        <view class="placeholder ">
+                            美{{wordInfo.en}}
+                        </view>
+                    </view>
+                </view>
+                <view class='weui-flex' style='margin-top:20rpx;margin-bottom:20rpx; min-height:300rpx;'>
+                    <view class="weui-cells weui-cells_after-title" style='width:100%;font-size:13px;color:#666'>
+                        <view class="weui-cell">
+                          <view class="weui-cell__bd">
+                              ({{wordInfo.ukdes[0]}})   {{wordInfo.ukdes[1]}}
+                              </view>
+                              <view class="weui-cell__ft"></view>
+                            
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">{{wordInfo.zhdes[0]}}</view>
+                            <view class="weui-cell__ft"></view>
+                        </view>
+                    </view>
+                </view>
+            
+                <view class='weui-flex wordJiexiChild'>
+                    <view class="weui-flex__item">
+                        <view class="placeholder yinyuWords" catchtap='playLiJuVoice'>
+                             <view  class="{{(fayinState1==1)?'fayin':'fayin_active'}}" style='display:inline-block;'></view>
+                            <text>{{wordInfo.sentence[0]}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='weui-flex wordJiexiChild'>
+                    <view class="weui-flex__item">
+                        <view class="placeholder hanziWord">
+                            {{wordInfo.sentence[1]}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+            
+        </view>
+        
+    </view>
+
+    <view class='bottomView'>
+        <view class='page__bd page__bd_spacing' style='padding-bottom:0px'>
+            <view class="weui-flex">
+                <view class="weui-flex__item" bindtap='playYinPing'>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder" style='height: 1em;'>
+                                <view class="{{(fayinState==1)?'fayin':'fayin_active'}}"></view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder">
+                                发音
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                    <view class="weui-flex__item" bindtap="{{showJiexi==1?'nextWord1':'nextWord'}}">
+                        <view class="weui-flex">
+                            <view class="weui-flex__item">
+                                <view class="placeholder" style='height:1em'>
+                                <canvas style="width: 60rpx; height:60rpx;margin:0 auto;" canvas-id="canvasid1"></canvas>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="weui-flex">
+                            <view class="weui-flex__item">
+                                <view class="placeholder" >
+                                    {{showJiexi==1?'':'继续背诵'}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                
+                <view class="weui-flex__item" bindtap='enterZhangWo'>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder" style='height:1em;'>
+                                <view class='repeat'></view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder">
+                                直接满分
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<view class='zouShen' wx:if="{{showZouShen==2}}">
+    <view bindtap='continueWord'>
+      <view class='tubiao'>
+        <image src='/images/index/zoushen.png'></image>
+      </view>
+      
+      <text class='wenzi'>走神了？</text>
+      <text class='wenzi1'>作答完一个单词，迅速过一遍中英文释义和例句，然后点击任意位置「继续背诵」到下一个单词。</text>
+      <view class='wenzi2'>你已经专注学习了<text>{{useTime}}</text></view>
+      <view class='wenzi2'>还差<text>{{steadTime}}</text>就能完成专注目标</view>
+      <view class='wenzi2'>继续学习一下完成专注目标吧!</view>
+    </view>
+    <button bindtap='continueWord' class='jixu'>继续学习</button>
+    <button bindtap='giveUp' class='fangqi'>放弃专注</button>
+</view>
+
+
+
+

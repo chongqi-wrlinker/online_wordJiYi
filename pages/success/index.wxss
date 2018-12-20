@@ -1,0 +1,32 @@
+/* pages/success/index.wxss */
+page{
+    background-image: url('http://bpic.588ku.com/element_origin_min_pic/18/06/10/744b3ce41184ec8048e4be1a68ec832d.jpg');
+    overflow:hidden; 
+    position:fixed; 
+    margin: 0px; 
+    /*下面的是关键的设置100%显示*/ 
+    background-size: 100% 100%; 
+}
+page image{
+    width: 100%;
+    height: 100%;
+}
+.placeholder{
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    height: 2.3em;
+    line-height: 2.3em;
+    color:white;
+}
+.wenzi{position:absolute;
+width:100%;
+height:120rpx;
+top:0;
+left:0;
+}
+.zhuanzhu{
+    margin: 0px; 
+    /*下面的是关键的设置100%显示*/ 
+    background-size: 100% 100%; 
+}

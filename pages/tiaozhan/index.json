@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "快速挑战",
+    "component": true,
+    "usingComponents": {
+        "boWen": "/components/boWen/boWen"
+    }
+}

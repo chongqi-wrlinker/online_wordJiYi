@@ -1,0 +1,42 @@
+<view class="page">
+    <image class='backgrounImage' src="/images/tuisong/tuisong_background.jpg"></image>
+    <view class="page__hd" style='padding-top:20px;padding-bottom:10px;'>
+        <view class="page__title">My Love (Radio Edit)</view>
+        <view class="page__desc">专辑：The Lovesongs</view>
+    </view>
+    <view class='page__hd' style='padding-top:0px;padding-bottom:0px;'>
+         <audio poster="http://imge.kugou.com/stdmusic/20160908/20160908222004486300.jpg" name="My Love (Radio Edit)" author="Westlife" src="http://fs.w.kugou.com/201809261302/8ef476febb25074a87330bb965b29c46/G033/M09/1F/0B/wYYBAFXiRaiAE68TAEMHm-VD3Y8424.mp3" id="myAudio" controls loop></audio>
+    </view>
+    <view class="page__hd" style='padding-top:0px'>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>Westlife - My Love</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty street</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty house</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>A hole inside my heart</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I'm all alone</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>The rooms are getting smaller</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder how</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder why</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty street</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty house</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>A hole inside my heart</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I'm all alone</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>The rooms are getting smaller</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder how</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder why</view>
+         <view class="page__desc" style='font-size:12px;text-align:center;'>Westlife - My Love</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty street</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty house</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>A hole inside my heart</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I'm all alone</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>The rooms are getting smaller</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder how</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder why</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty street</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>An empty house</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>A hole inside my heart</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I'm all alone</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>The rooms are getting smaller</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder how</view>
+        <view class="page__desc" style='font-size:12px;text-align:center;'>I wonder why</view>
+    </view>
+</view>

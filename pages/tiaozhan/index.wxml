@@ -1,0 +1,145 @@
+<view class="page">
+    <!--pages/doTest/index.wxml-->
+    <view class="page__bd page__bd_spacing" style='margin-bottom:100rpx;'>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView">
+                    {{numberOfAnswers}}/{{wordCount}}题
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView" style=''>
+                    得分率：{{rightScore}}
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView" style=''>
+                    耗时：{{runTime}}
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder word " style='height:185px;line-height:185px'>
+                    {{wordInfo.word}}
+                </view>
+            </view>
+        </view>
+         <view class="weui-flex">
+            <view class="weui-flex__item "  data-flag="1" data-state="{{wordInfo['optionList'][0]['optionFlag']}}" bindtap='answerQuestion'>
+                <view id="answerRight1" class="placeholder anwer {{wordInfo['optionList'][0]['optionState']}} ripple-effect1">
+                    <boWen id="boWen1" dom="answerRight1"></boWen>
+                    {{wordInfo['optionList'][0]['optionContent']}}
+                </view>
+            </view>
+            
+        </view>
+        <view class='weui-flex'>
+            <view class="weui-flex__item " data-flag="2" data-state="{{wordInfo['optionList'][1]['optionFlag']}}" bindtap='answerQuestion'>
+                <view id="answerRight2" class="placeholder anwer {{wordInfo['optionList'][1]['optionState']}} ripple-effect1">
+                    <boWen id="boWen2" dom="answerRight2"></boWen>
+                    {{wordInfo['optionList'][1]['optionContent']}}
+                </view>
+            </view>
+        </view>
+        <view class='weui-flex'>
+            <view class="weui-flex__item " data-flag="3" data-state="{{wordInfo['optionList'][2]['optionFlag']}}" bindtap='answerQuestion'>
+                <view id="answerRight3" class="placeholder anwer {{wordInfo['optionList'][2]['optionState']}} ripple-effect1">
+                    <boWen id="boWen3" dom="answerRight3"></boWen>
+                    {{wordInfo['optionList'][2]['optionContent']}}
+                </view>
+            </view>
+        </view>
+        <view class='weui-flex'>
+            <view class="weui-flex__item "data-flag="4" data-state="{{wordInfo['optionList'][3]['optionFlag']}}" bindtap='answerQuestion'>
+                <view id="answerRight4" style='text-align:center;padding-left:0px' class="placeholder anwer {{wordInfo['optionList'][3]['optionState']}} ripple-effect1">
+                    <boWen id="boWen4" dom="answerRight4"></boWen>
+                    {{wordInfo['optionList'][3]['optionContent']}}
+                </view>
+            </view>
+        </view>
+        
+        
+    </view>
+    
+</view>
+<view class='yinping'  style='display:none'>
+    <audio bindended="playEnd"  src="{{wordInfo.mp3}}" id="myAudio" controls ></audio>
+</view>
+<view class='bottomView'>
+    <view class='page__bd page__bd_spacing' style='padding-bottom:0px'>
+        <view class="weui-flex">
+            <view class="weui-flex__item" bindtap='playYinPing'>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height: 1em;'>
+                            <view class="{{(fayinState==1)?'fayin':'fayin_active'}}"></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder">
+                            发音
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height:1em'>
+                           <canvas hidden="{{canvasSheetHidden}}" style="width: 60rpx; height:60rpx;margin:0 auto;" canvas-id="canvasid"></canvas>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex__item" bindtap="actionSheetTap">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height:1em;'>
+                            <view class='repeat'></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder">
+                            报错
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!--答题完成后的弹出框-->
+<block wx:if="{{!finishState}}">
+    <view class='ceng'> </view>
+    <view class='content page'>
+        <view  class="page__bd page__bd_spacing">
+            <view class="weui-flex">
+                <view  class="weui-flex__item ">
+                    <view class="placeholder" style='height:360rpx;position:relative;width:95%;margin-bottom:0px;'>
+                        <image src='/images/wordcheck/xunzhang.png'></image>
+                        <text class='wenzi'>{{rightScore}}</text>
+                    </view>
+                    <view class="placeholder" style='color:rgb(177, 24, 24);font-size:14px'>
+                             总共耗时：{{runTime}}
+                    </view>
+                    <view class='placeholder'>
+                        <button class='complete' bindtap='finishTest'>完成挑战</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}" wx:key="{{key}}">
+        <action-sheet-item class="item" bindtap="bindItem" data-item="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

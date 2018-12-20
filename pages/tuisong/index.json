@@ -1,0 +1,10 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1bd0bd",
+    "navigationBarTitleText": "每日歌曲赏析",
+    "navigationBarTextStyle": "white",
+    "component": true,
+    "usingComponents": {
+        
+    }
+}

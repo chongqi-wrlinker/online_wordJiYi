@@ -1,0 +1,93 @@
+<view class="page blur">
+    <view class="page__bd page__bd_spacing" style='padding-bottom:0px'>
+        
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:80px;font-size:14px'>
+                     <block wx:if="{{userInfoState}}">
+                        <view style='height:100%'><image style='border-radius:50%;width:80px;' src="{{userInfo.touxiang}}"></image></view>
+                     </block>
+                    <block wx:else>
+                        <button style='width:100%;height:100px;' class="touxiang" open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo">
+                            <image src="{{userInfo.touxiang}}"></image>
+                        </button>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class='weui-flex'>
+            <view class='weui-flex__item'>
+                <view class='placeholder'>
+                    <view class='words'>{{userInfo.name}}</view>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+    
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:45px;font-size:14px'>
+                    <progress percent="{{studyData.progress}}" activeColor="#1bd0bd" backgroundColor="gray" active />
+                    <text>总词数:86800，您已学习<text>{{studyData.studyWord}}</text>个词汇</text>
+                </view>
+            </view>
+        </view>
+        
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:60px;'>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder number">{{studyData.studyTime}}</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder des">学习时长</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:60px;'>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder number">{{studyData.studyWord}}</view>
+                        </view>
+                    </view>
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            <view class="placeholder des">学习词数</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view id="beisong" class="weui-flex__item">
+                <view class="placeholder ripple-effect1" style='height:85px;'>
+                    <boWen id="boWen3" dom="beisong"></boWen>
+                    <image bindtap='jumpUrl'  src="/images/index/kaishi.png "></image>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view  id="jiance" class="weui-flex__item" bindtap='jumpWordCheck'>          
+                <view class="placeholder cihui wordCheckDiv ripple-effect1">
+                    <boWen id="boWen1" dom="jiance"></boWen>
+                    <image src='/images/index/jiance.png'></image>
+                    <text>检测词汇量</text>
+                </view>
+            </view>
+            <view id="tiaozhan" class="weui-flex__item " bindtap='jumpTiaozhan'>
+                <view class="placeholder tiaozhan ripple-effect1">
+                    <boWen id="boWen2" dom="tiaozhan"></boWen>
+                    <image src='/images/index/kuaisu.png'></image>  
+                    <text>快速挑战</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

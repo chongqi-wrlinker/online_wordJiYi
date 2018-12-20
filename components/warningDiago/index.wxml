@@ -1,0 +1,32 @@
+<!--components/warningDiago/index.wxml-->
+<block wx:if="{{show}}">
+    <view class='md-overlay' ></view>
+    <view class="{{!flag?'md-modal':'md-modal1'}}" >
+        <view class="page__bd page__bd_spacing" style='height:100%;'>
+            
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder warningWord">
+                            <block wx:if="{{flag}}">
+                            你走神了
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            
+            <view class="weui-flex" style='height:57%;width:70%;margin-left:15%;'>
+                <view class="weui-flex__item" style='height:100%;'>
+                    <view class="placeholder" style='height:100%;'><image src='/images/index/wraning.png'></image></view>
+                </view>
+            </view>
+            <block wx:if="{{flag}}">
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder" style='width:36%;margin-left:32%;'><button class="weui-btn mini-btn" type="warn" size="mini" bindtap='close'>关闭</button></view>
+                </view>
+            </view>
+            </block>
+        </view>
+    </view>
+</block>
+

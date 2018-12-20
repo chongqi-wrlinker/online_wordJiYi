@@ -1,0 +1,34 @@
+<!--pages/jiexi/index.wxml-->
+<view class="page">
+    <!--pages/doTest/index.wxml-->
+    <view wx:if="{{showDataFlag}}" class="page__bd page__bd_spacing" style='padding-bottom:0px;margin-bottom:100rpx;'>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView" style=''>
+                    词汇检测曲线图
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+               <view class="canvas-view">
+                    <canvas class="canvas" canvas-id="canvasId"></canvas>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+    <view class='beijing'>
+        <view class='tubiao'>
+          <image src='/images/index/tsjiance.png'></image>
+          <view>您还没有进行词汇检测，快去检测吧</view>
+        </view>
+        <button bindtap='jumpToWordCheck' class='tiaozhanan'>去检测</button>
+      </view>
+    </view>
+</view>
+
+
+
+
+

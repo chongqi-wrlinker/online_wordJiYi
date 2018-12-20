@@ -1,0 +1,105 @@
+<view class="page">
+    <!--pages/doTest/index.wxml-->
+    <view class="page__bd page__bd_spacing" style='margin-bottom:100rpx;'>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView">
+                    1/40题
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder buttonView" style=''>
+                    专注时长:{{steadTime}}
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder word " style='height:85px;line-height:85px'>
+                    body
+                </view>
+            </view>
+        </view>
+        <block wx:for="{{answerList}}" wx:key="index">
+        <view class="weui-flex">
+            <view class="weui-flex__item" data-index="{{item.index}}" bindtap='answerQuestion'>
+                <block wx:if="{{clickAnswer}}">
+                    <block wx:if="{{item.state}}">
+                        <block wx:if="{{item.flag<1}}">
+                            <view class="placeholder anwer answerWrong">{{item.content}} </view>
+                        </block>
+                        <block wx:else>
+                            <view class="placeholder anwer answerRight">{{item.content}} </view>
+                        </block>
+                    </block>
+                    <block wx:else>
+                        <view class="placeholder anwer">{{item.content}} </view>
+                    </block>
+                </block>
+                <block wx:else>
+                    <view class="placeholder anwer">{{item.content}} </view>
+                </block>
+            </view>
+        </view>
+        </block>
+    </view>
+</view>
+
+<view class='yinping'  style='display:none'>
+    <audio bindended="playEnd"  src="https://sp0.baidu.com/-rM1hT4a2gU2pMbgoY3K/gettts?lan=uk&text=animal&spd=2&source=alading" id="myAudio" controls ></audio>
+</view>
+
+<view class='bottomView'>
+    <view class='page__bd page__bd_spacing' style='padding-bottom:0px'>
+        <view class="weui-flex">
+            <view class="weui-flex__item" bindtap='playYinPing'>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height: 1em;'>
+                            <view class="{{(fayinState==1)?'fayin':'fayin_active'}}"></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder">
+                            发音
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height:1em'>
+                           <canvas style="width: 60rpx; height:60rpx;margin:0 auto;" canvas-id="canvasid"></canvas>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" >
+                            我不确定
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder" style='height:1em;'>
+                            <view class='repeat'></view>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-flex">
+                    <view class="weui-flex__item">
+                        <view class="placeholder">
+                            直接满分
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

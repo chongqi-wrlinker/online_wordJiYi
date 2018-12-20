@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "生词训练营",
+    "component": true,
+    "usingComponents": {
+        "boWen": "/components/boWen/boWen"
+    }
+}

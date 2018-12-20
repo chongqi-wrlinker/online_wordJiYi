@@ -1,0 +1,137 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="container">
+                            <block wx:for="{{countList}}"  wx:key="key" wx:for-index="idx">
+                                <view class="rank-item">
+                                    <!--头像-->
+                                        <view class="rank-img">
+                                            <image src="{{item.avatarurl}}"></image>
+                                        </view>
+                                    <!--展示昵称,以及贡献值-->
+                                    <view class="rank-name">{{item.name}}</view>
+                                    <view class="rank-price">总词数：{{item.studycount}}</view>
+                                    <!--排名-->
+                                    <view class="rank-uv">
+                                        <block wx:if="{{idx<1}}"><image src="/images/rank/rank1.png" /></block>
+                                        <block wx:elif="{{idx==1}}"><image src="/images/rank/rank2.png" /></block>
+                                        <block wx:elif="{{idx==2}}"><image src="/images/rank/rank3.png" /></block>
+                                        <block wx:else><text>第 {{idx+1}} 名</text></block>
+                                    </view>
+                                </view>
+                            </block>
+                            <view class='rank-item' hidden='{{!showLoadIngIcon}}'>
+                                <view style='width:140rpx;height:140rpx;margin:auto'>
+                                    <image src="/images/paihangbang/loading.gif"></image>
+                                </view>
+                            </view>
+                            <view class='rank-item bottomView'>
+                                <view class="rank-img">
+                                    <image src="{{wo.countInfo.avatarurl}}"></image>
+                                </view>
+                                <!--展示昵称,以及贡献值-->
+                                <view class="rank-name">{{wo.countInfo.name}}</view>
+                                <view class="rank-price">总词数：{{wo.countInfo.studycount}}</view>
+                                <!--排名-->
+                                <view class="rank-uv">
+                                    <text>第 {{wo.countInfo.index}} 名</text>
+                                </view>
+                            </view>
+                        </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="container">
+                            <block wx:for="{{timeList}}"  wx:key="key" wx:for-index="idx">
+                                <view class="rank-item">
+                                    <!--头像-->
+                                        <view class="rank-img">
+                                            <image src="{{item.avatarurl}}"></image>
+                                        </view>
+                                    <!--展示昵称,以及贡献值-->
+                                    <view class="rank-name">{{item.name}}</view>
+                                    <view class="rank-price">学习时间：{{item.studytime}}秒</view>
+                                    <!--排名-->
+                                    <view class="rank-uv">
+                                        <block wx:if="{{idx<1}}"><image src="/images/rank/rank1.png" /></block>
+                                        <block wx:elif="{{idx==1}}"><image src="/images/rank/rank2.png" /></block>
+                                        <block wx:elif="{{idx==2}}"><image src="/images/rank/rank3.png" /></block>
+                                        <block wx:else><text>第 {{idx+1}} 名</text></block>
+                                    </view>
+                                </view>
+                            </block>
+                            <view class='rank-item' hidden='{{!showLoadIngIcon}}'>
+                                <view style='width:140rpx;height:140rpx;margin:auto'>
+                                    <image src="/images/paihangbang/loading.gif"></image>
+                                </view>
+                            </view>
+                            <view class='rank-item bottomView'>
+                                <view class="rank-img">
+                                    <image src="{{wo.timeInfo.avatarurl}}"></image>
+                                </view>
+                                <!--展示昵称,以及贡献值-->
+                                <view class="rank-name">{{wo.timeInfo.name}}</view>
+                                <view class="rank-price">学习时间：{{wo.timeInfo.studytime}}秒</view>
+                                <!--排名-->
+                                <view class="rank-uv">
+                                    <text>第 {{wo.timeInfo.index}} 名</text>
+                                </view>
+                            </view>
+                        </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="container">
+                            <block wx:for="{{tiaoZhanList}}"  wx:key="key" wx:for-index="idx">
+                                <view class="rank-item">
+                                    <!--头像-->
+                                        <view class="rank-img">
+                                            <image src="{{item['userInfo'][0]['avatarurl']}}"></image>
+                                        </view>
+                                    <!--展示昵称,以及贡献值-->
+                                    <view class="rank-name">{{item['userInfo'][0]['name']}}</view>
+                                    <view class="rank-price">正确率/耗时：{{item.score}}%/{{item.runtime}}秒</view>
+                                    <!--排名-->
+                                    <view class="rank-uv">
+                                        <block wx:if="{{idx<1}}"><image src="/images/rank/rank1.png" /></block>
+                                        <block wx:elif="{{idx==1}}"><image src="/images/rank/rank2.png" /></block>
+                                        <block wx:elif="{{idx==2}}"><image src="/images/rank/rank3.png" /></block>
+                                        <block wx:else><text>第 {{idx+1}} 名</text></block>
+                                    </view>
+                                </view>
+                            </block>
+                            <view class='rank-item' hidden='{{!showLoadIngIcon}}'>
+                                <view style='width:140rpx;height:140rpx;margin:auto'>
+                                    <image src="/images/paihangbang/loading.gif"></image>
+                                </view>
+                            </view>
+                            <view class='rank-item bottomView'>
+                                <block wx:if="{{wo.tiaozhanInfo}}">
+                                    <view class="rank-img">
+                                        <image src="{{wo.tiaozhanInfo.userInfo[0]['avatarurl']}}"></image>
+                                    </view>
+                                    <!--展示昵称,以及贡献值-->
+                                    <view class="rank-name">{{wo.tiaozhanInfo.userInfo[0]['name']}}</view>
+                                    <view class="rank-price">正确率/耗时：{{wo.tiaozhanInfo.score}}%/{{wo.tiaozhanInfo.runtime}}</view>
+                                    <!--排名-->
+                                    <view class="rank-uv">
+                                        <text>第 {{wo.tiaozhanInfo.index}} 名</text>
+                                    </view>
+                                </block>
+                                <block wx:else><view class='noneContent'>您尚未进行挑战，没有排名</view></block>
+                            </view>
+                        </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+</view>

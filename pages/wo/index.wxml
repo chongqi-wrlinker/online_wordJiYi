@@ -1,0 +1,61 @@
+<view class="page blur">
+    <!--pages/doTest/index.wxml-->
+    <view class="page__bd page__bd_spacing" style='margin-bottom:100rpx;'>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:80px;font-size:14px'>
+                     <block wx:if="{{userInfoState}}">
+                        <view style='height:100%'><image style='border-radius:50%;width:80px;' src="{{userInfo.touxiang}}"></image></view>
+                     </block>
+                    <block wx:else>
+                        <button style='width:100%;height:100px;' class="touxiang" open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo">
+                            <image src="{{userInfo.touxiang}}"></image>
+                        </button>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class='weui-flex'>
+            <view class='weui-flex__item'>
+                <view class='placeholder'>
+                    <view class='words'>{{userInfo.name}}</view>
+                </view>
+            </view>
+            
+        </view>
+        
+        <view class='weui-flex'>
+            <view class='weui-flex__item'>
+               <view class="weui-cells weui-cells_after-title">
+                    <view bindtap='jumpToMap' data-flag="1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view class="weui-cell__hd">
+                            <image src="/images/index/kuaisu_on.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                        </view>
+                        <view class="weui-cell__bd">快速挑战曲线图</view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </view>
+                    <view bindtap='jumpToMap' data-flag="2" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view class="weui-cell__hd">
+                            <image src="/images/index/jiance_on.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                        </view>
+                        <view class="weui-cell__bd">单词检测曲线图</view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </view>
+                    <navigator url="/pages/paihangbang/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view class="weui-cell__hd">
+                            <image src="/images/rank/rank_on.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                        </view>
+                        <view class="weui-cell__bd">排行榜记录</view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+         
+    </view>
+    
+</view>
+
+
+
+

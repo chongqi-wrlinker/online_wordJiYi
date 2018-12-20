@@ -1,0 +1,45 @@
+<!--pages/success/index.wxml-->
+<view class='page'>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder"></view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder"></view></view>
+        </view>
+        
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='font-size:40px'>{{time}}</view>
+            </view>
+        </view>
+        
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder zhuanzhu" style='height:120rpx;position:relative;width:92%;'>
+                   <image src='/images/success/beijing.png' style='width:100%; height:100%;'></image>
+                    <text class='wenzi'>专注时间</text>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="placeholder"></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:90%;'>
+                    <image src='/images/success/beisong.png' style='width:40%;margin-left:11px;'></image>
+                </view>
+            </view>
+            <view class="weui-flex__item">
+                <view class="placeholder" style='height:140rpx;' >
+                    <image bindtap='gotoHome' src='/images/success/fenxiang.png' style='width:43%;height:81%;margin-top:24rpx;'></image>
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item" bindtap='gotoHome'><view class="placeholder" style='font-size:12px;height:12px;line-height:12px;'>继续背诵</view></view>
+            <view class="weui-flex__item"><view class="placeholder" style='font-size:12px;height:12px;line-height:12px;'>分享好友</view></view>
+        </view>
+    </view>
+</view>

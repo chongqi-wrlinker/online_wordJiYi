@@ -1,0 +1,57 @@
+<!--pages/oldWord/index.wxml-->
+<view>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+             <view class="placeholder" style='width:40px'>
+                <image src="/images/config/tongzhi.png"></image>
+             </view>
+            <view class="weui-flex__item">
+                <view class="placeholder guize">
+                    答题规则如下：是伐啦开始减肥拉克丝法律考试费阿拉山口法律是否
+                    身份卡手机发送积分拉屎咖啡阿拉山口法律考试费就案例是开发就按时缴费按时缴费
+                    按时发卡号是附件啊是否可结案后是否看见爱上噶简单换个卡时间到哈市科技东莞哈萨克开始的放假
+                    是伐啦开始减肥拉克丝法律考试费阿拉山口法律是否
+                    身份卡手机发送积分拉屎咖啡阿拉山口法律考试费就案例是开发就按时缴费按时缴费
+                    按时发卡号是附件啊是否可结案后是否看见爱上噶简单换个卡时间到哈市科技东莞哈萨克开始的放假
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder guizean" bindtap='showtck'>
+                    答题规则（查看全部）
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder number" style='line-height:200rpx;' bindtap='jumpUrl'>
+                    <view style='height:80rpx;'></view>
+                    开始复习
+                </view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="{{showtck?'ztck':'hide'}}"></view>
+    <view class="{{showtck?'nrtckhz':'hide'}}">
+      <view class='nrtck'>
+        <view class='top'>
+          <text>答题规则</text>
+        </view>
+        <view class='neirong'>
+          <text>
+            答题规则如下：是伐啦开始减肥拉克丝法律考试费阿拉山口法律是否
+            身份卡手机发送积分拉屎咖啡阿拉山口法律考试费就案例是开发就按时缴费按时缴费
+            按时发卡号是附件啊是否可结案后是否看见爱上噶简单换个卡时间到哈市科技东莞哈萨克开始的放假
+            是伐啦开始减肥拉克丝法律考试费阿拉山口法律是否
+            身份卡手机发送积分拉屎咖啡阿拉山口法律考试费就案例是开发就按时缴费按时缴费
+            按时发卡号是附件啊是否可结案后是否看见爱上噶简单换个卡时间到哈市科技东莞哈萨克开始的放假
+          </text>
+        </view>
+      </view>
+      <view  class='guanbiimg' bindtap='guanbi'>
+        <image src='/images/config/guanbi.png'></image>
+      </view>
+    </view>   
+</view>

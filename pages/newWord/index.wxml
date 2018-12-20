@@ -1,0 +1,51 @@
+<!--pages/newWord/index.wxml-->
+<view class='page'>
+    <canvas canvas-id="canvasid" class="{{hide?'none':''}}" style='width:100%;'></canvas>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+          <view class="placeholder" style='width:40px'>
+                <image src="/images/config/tongzhi.png"></image>
+             </view>
+            <view class="weui-flex__item">
+                <view class="placeholder guize">
+                    答题规则如下：{{rule}}
+                </view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder guizean" bindtap='showtck'>
+                    答题规则（查看全部）
+                </view>
+            </view>
+        </view>
+      
+        
+        <view class="weui-flex" style='margin-top:40rpx;'>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+            <view class="weui-flex__item">
+                <view class="placeholder">
+                    <button class="weui-btn" bindtap='goToDoTest' type="primary" style='background-color:#4671D5;color:white;'>生词突破</button>
+                </view>
+            </view>
+            <view class="placeholder" style='background-color:#F8F8F8;'></view>
+        </view>
+        
+    </view>
+    <view class="{{showtck?'ztck':'hide'}}"></view>
+    <view class="{{showtck?'nrtckhz':'hide'}}">
+      <view class='nrtck'>
+        <view class='top'>
+          <text>答题规则</text>
+        </view>
+        <view class='neirong'>
+          <text>
+            答题规则如下：{{rule}}
+          </text>
+        </view>
+      </view>
+      <view  class='guanbiimg' bindtap='guanbi'>
+        <image src='/images/config/guanbi.png'></image>
+      </view>
+    </view>
+</view>

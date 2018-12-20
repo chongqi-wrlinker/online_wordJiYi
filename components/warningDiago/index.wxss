@@ -1,0 +1,82 @@
+/* components/warningDiago/index.wxss */
+.placeholder{
+    margin: 5px;
+    text-align: center;
+    height: 2.3em;
+    line-height: 2.3em;
+    color: #666;
+}
+.md-overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0px;
+    opacity:0.3;
+}
+.md-modal{
+    position: fixed;
+    top: 10%;
+    left: 20%;
+	width:60%;
+    height:40%;
+	animation:myfirst 3s infinite;
+	animation-direction:alternate;
+    background-color: white;
+    border:2px solid #ff5e52;
+}
+
+.md-modal1{
+    position: fixed;
+    top: 10%;
+    left: 20%;
+	width:60%;
+    height:40%;
+    background-color: white;
+    animation: myfirst1 3s infinite;
+    animation-direction: alternate;
+    border:2px solid #ff5e52;
+}
+
+@keyframes myfirst
+{
+	from {
+        opacity: 0.3;
+        
+    }
+	to {
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst1{
+    from{
+        border-radius: 0%;
+        top: 10%;
+    }
+    to{
+        border-radius: 50%;
+        top: 20%;
+    }
+}
+.warningImg{
+    width: 100%;
+    height: 100%;
+}
+.warningImg image{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+}
+
+.warningWord{
+    width:30%;
+    font-size:14px;
+    margin-left:35%;
+}
+
+
+
+.blur{
+    filter:blur(2px);
+}

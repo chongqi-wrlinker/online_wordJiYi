@@ -1,0 +1,12 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1bd0bd",
+    "navigationBarTitleText": "沃仁刷词王",
+    "navigationBarTextStyle": "white",
+    "component": true,
+    "usingComponents": {
+        "warningDiago": "/components/warningDiago/index",
+        "boWen": "/components/boWen/boWen"
+        
+    }
+}

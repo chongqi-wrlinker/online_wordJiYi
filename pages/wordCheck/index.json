@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "单词检测",
+    "component": true,
+    "usingComponents": {
+        "boWen": "/components/boWen/boWen"
+    }
+}

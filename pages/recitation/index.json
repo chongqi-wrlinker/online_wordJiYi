@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "新词背诵",
+    "component": true,
+    "usingComponents": {
+        "boWen": "/components/boWen/boWen"
+    }
+}

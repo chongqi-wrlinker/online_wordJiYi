@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "单词详解",
+    "component": true,
+    "usingComponents": {
+        "warningDiago": "/components/warningDiago/index"
+    }
+}

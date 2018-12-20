@@ -1,0 +1,4 @@
+<!--components/boWen/boWen.wxml-->
+<block wx:if="{{btnInfo.showState}}">
+    <view class='ripple-effect' style='width:{{btnInfo.width}};height:{{btnInfo.height}};top:{{btnInfo.top}};left:{{btnInfo.left}}'></view>
+</block>
