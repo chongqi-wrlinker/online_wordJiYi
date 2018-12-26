@@ -49,8 +49,8 @@
             {
                 "pagePath": "pages/wo/index",
                 "text": "关于我",
-                "iconPath": "/images/index/tuisong_a.png",
-                "selectedIconPath": "/images/index/tuisong_l1.png"
+                "iconPath": "/images/index/wo1.jpg",
+                "selectedIconPath": "/images/index/wo2.jpg"
             }
         ]
     },
