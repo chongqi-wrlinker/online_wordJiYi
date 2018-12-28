@@ -1,6 +1,6 @@
 <!--pages/jiexi/index.wxml-->
 <block wx:if="{{showZouShen==1}}">
-    <view class="page" bindtap="{{showJiexi==1?'nextWord1':'nextWord'}}">
+    <view class="page" style='height:100%'  bindtap="{{showJiexi==1?'nextWord1':'nextWord'}}">
     <!--pages/doTest/index.wxml-->
         <view class="page__bd page__bd_spacing" style='padding-bottom:0px;margin-bottom:100rpx;'>
             <view class='weui-flex'>
