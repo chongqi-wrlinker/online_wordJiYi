@@ -24,6 +24,15 @@ image{
   box-sizing: border-box;
   position: relative;
 }
+.rank-item .rank-price {
+height:40rpx;
+line-height:40rpx;
+margin-top:10rpx;
+font-size:24rpx;
+color:#d55a4a;
+
+}
+
 
 .rank-item .rank-img {
   width: 100rpx;

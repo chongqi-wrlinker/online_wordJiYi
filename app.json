@@ -1,5 +1,6 @@
 {
     "pages": [
+        
         "pages/index/index",
         "pages/paihangbang/index",
         "pages/tiaozhanzhexian/index",
@@ -17,7 +18,7 @@
         "pages/config/index",
         "pages/tuisong/index",
         "pages/wo/index"
-            ],
+    ],
     "window": {
         "navigationBarTitleText": "番茄单词记忆",
         "backgroundColor": "#f8f8f8",
@@ -54,5 +55,8 @@
             }
         ]
     },
-    "debug": false
+    "debug": false,
+    "navigateToMiniProgramAppIdList": [
+        "wxdd501333918325d6"
+    ]
 }

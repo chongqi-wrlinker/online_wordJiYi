@@ -1,0 +1,19 @@
+<template name="heart">
+    <view class='heart' >
+        <navigator  style='width:100%;height:100%;background:none;'
+        target="miniProgram" 
+        open-type="navigate" 
+        app-id="wxdd501333918325d6" 
+        path="" 
+        extra-data="" 
+        version="release">
+        <image src="/template/xuanfu/heart.png" style='width:100%;height:100%'></image>    
+    </navigator>
+    </view>
+</template>
+
+<template name="flash">
+    <view class='flash' bindtap='nextArticle'>
+        <image src='/template/xuanfu/flash.png' style='width:100%;height:100%'></image>
+    </view>
+</template>

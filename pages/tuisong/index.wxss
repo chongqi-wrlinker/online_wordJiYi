@@ -1,5 +1,6 @@
 /* pages/tuisong/index.wxss */
-
+@import "../../template/article/article.wxss";
+@import "../../template/xuanfu/xuanfu.wxss";
 .page{
     color: white;
 }

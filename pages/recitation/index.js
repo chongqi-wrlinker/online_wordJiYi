@@ -26,7 +26,7 @@ Page({
        
         answerTime: 80,//80为答题，200为查看解析（倒计时圆圈的快慢）
         userAnswerState: 1,//用户回答该词是否正确,1:回答正确，2:回答错误
-        showZouShen: 1,//1：关闭提示用户走绳，2：显示提示用户走神
+        showZouShen: 1,//1：关闭提示用户走神，2：显示提示用户走神
         logAnswer:[],//记录用户回答的正确或者错误的json数组
         zhangWo:[],//记录用户已经掌握的单词数组
     },
@@ -54,13 +54,16 @@ Page({
             } else {
                 this.audioPlay();
                 console.log("出现提示音");
-                /**clearInterval(int);
+                //clearInterval(int);
                 //提示用户走神
-                var totalTime = parseInt(this.data.firstTime) * 60;
+                /**var totalTime = parseInt(this.data.firstTime) * 60;
+
                 var currentTime = this.data.steadTime;
                 var tempTime = currentTime.split(":");
                 var finalTime = totalTime - (parseInt(tempTime[0]) * 60) - (parseInt(tempTime[1]));
+
                 var useTime = common.timeOut(finalTime);
+                console.log(useTime);
                 this.setData({
                     showZouShen: 2,
                     useTime: useTime
@@ -400,7 +403,7 @@ Page({
             if (time < 0) {
                 clearInterval(int);
                 //跳转到专注时间完成的页面
-                that.onUnload();
+               // that.onUnload();
                 wx.navigateBack({
                     
                 })
@@ -467,6 +470,7 @@ Page({
         var currentTime = this.data.steadTime;
         var tempTime = currentTime.split(":");
         var finalTime = totalTime - (parseInt(tempTime[0]) * 60) - (parseInt(tempTime[1]));
+        console.log(finalTime);
         //更新用户的学习单词数量和学习时间,把困难的单词加入生词本中
         var answerOfQuestion = this.data.answerOfQuestion;
         var zhangWo = this.data.zhangWo;

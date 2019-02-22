@@ -1,0 +1,103 @@
+page{
+    height: auto;
+}
+
+/**------------------------歇后语,谚语-------------------------*/
+.xiehouyu{
+    margin-top:15%;
+    width:90%;
+    margin-left:5%;
+    text-align: center;
+}
+
+/**------------------------精彩段落，英文段落-------------------------*/
+.duanluo{
+    margin-top:15%;
+    width:90%;
+    margin-left:5%;
+    text-align:left;
+    font-size:18px;
+    text-indent:2em;
+}
+/*---------------------------格言---------------------------*/
+.geyan{
+    margin-top:15%;
+    width:90%;
+    margin-left:5%;
+}
+.geyan .content{
+    text-align:left;
+    font-size:18px;
+    text-indent:2em;
+}
+.geyan .line{
+    color:white;
+    margin-top:-7px;
+    float:left;
+    margin-left:5px;
+    margin-right:10px;
+
+}
+.geyan .author{
+    float:left;
+    font-size: 14px;
+}
+
+
+/*---------------------------古诗或者歌 <10万个为什么，没有标题>《生活小妙招》《常识》---------------------------*/
+.sige{
+    margin-top:15%;
+    width:90%;
+    margin-left:5%;
+    text-align: center;
+}
+.sige .title{
+    font-size: 18px;
+}
+.sige .author{
+    font-size: 14px;
+}
+.sige .content{
+    font-size: 16px;
+}
+/*---------------------------古词或者赋或者散文，寓言,童话，短片小说,---------------------------*/
+.ci_fu{
+    margin-top:15%;
+    width:90%;
+    margin-left:5%;
+}
+.ci_fu .title{
+    font-size: 18px;
+    text-align: center;
+}
+.ci_fu .author{
+    font-size: 14px;
+    text-align: center;
+}
+.ci_fu .content{
+    font-size: 16px;
+    text-align:left;
+    text-indent:2em;
+}
+
+/*---------------------------对联---------------------------*/
+.duilian{
+    margin-top:15%;
+    width:90%;
+    margin-left:20%;
+    font-size: 20px;
+}
+.duilian .upLian{
+    margin:0 auto;
+    width:14px;
+    line-height:23px;
+    float:left;
+
+}
+.duilian .downLian{
+    margin:0 auto;
+    width:14px;
+    line-height:23px;
+    float:left;
+    margin-left: 55%;
+}

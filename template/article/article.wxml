@@ -1,0 +1,75 @@
+<!--格言,英文格言-->
+<template name="geyan" >
+    <view class='geyan'>
+            <view class='content'>{{articleInfo['content']}}</view>
+            <view style='float:right;margin-top:60rpx;margin-right:20rpx;'>
+                <view class='line'>____</view>
+                <view class='author'>{{articleInfo['author']}} </view>
+            </view>
+    </view>
+</template>
+
+
+<!--诗  歌-->
+<template name="sige" >
+    <view class='sici'>
+        <view class='title'>将进酒·君不见黄河之水天上来</view>
+        <view class='author'>作者：李白</view>
+        <view class='content'>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+             <view>君不见黄河之水天上来，奔流到海不复回。</view>
+            <view>君不见黄河之水天上来，奔流到海不复回。</view>
+        </view>
+    </view>
+</template>
+<!--词  赋 散文，寓言,童话，短片小说,-->
+<template name="ci_fu" >
+    <view class='ci'>
+        <view class='title'>水调歌头·明月几时有</view>
+        <view class='author'>作者：苏轼</view>
+        <view class='content'>
+            <view>
+                丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
+                明月几时有？把酒问青天。不知天上宫阙，今夕是何年。
+                我欲乘风归去，又恐琼楼玉宇，高处不胜寒。
+                起舞弄清影，何似在人间？
+                转朱阁，低绮户，照无眠。
+                不应有恨，何事长向别时圆？
+                人有悲欢离合，月有阴晴圆缺，此事古难全。
+                但愿人长久，千里共婵娟。
+            </view>
+            
+        </view>
+    </view>
+</template>
+
+<!--对联-->
+<template name="duilian">
+    <view class='duilian'>
+        <view class='upLian'>风送钟声花里过，又响又香</view>
+        <view class='downLian'>月映萤灯竹下眠，越凉越亮</view>
+    </view>
+</template>
+
+<!--歇后语 谚语-->
+<template name="xiehouyu">
+    <view class='xiehouyu'>
+        孟良摔葫芦 —— 火啦
+    </view>
+</template>
+<!--段落-->
+<template name="duanluo">
+    <view class='duanluo'>
+        　都市的繁华迷乱了我的眼睛，找不到了自己，可故乡依在。纵使你在某个城市开心快乐的生活着，但在心灵深处，总有一条无形的东西牵引着你，一头在故乡那边，一头结固地栓在心底，一扯就痛。特别是久别故乡的人，也特别是夜深人静的时候，故乡这杯酒就愈香醇，故乡的影像就愈清晰，香醇的不想醒来，清晰的叫人心疼。“离恨恰如春草，更行更远还生。”就是因为这纵使走到天涯海角也解不开的乡情和乡愁，才让漂泊的我们得以慰藉，让流浪的心不再孤寂。
+    </view>
+</template>

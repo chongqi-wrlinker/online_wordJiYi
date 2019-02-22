@@ -1,0 +1,15 @@
+.heart{
+    width:100rpx;
+    height:100rpx;
+    position:fixed;
+    bottom:40rpx;
+    right:40rpx;
+}
+
+.flash{
+    width:70rpx;
+    height:70rpx;
+    position:fixed;
+    top:20px;
+    right:20px;
+}
